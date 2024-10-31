@@ -1,0 +1,145 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+}                
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.filter-window { 
+    background-color: white;
+    padding: 13px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 100;
+    width: 400px; /* Full width on the left */
+    height: 589px; /* Full height on the left */
+    max-height: 590px;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 15px;
+    margin: 8px;
+    opacity: .8;
+}
+
+
+.filter-window.minimized {
+    width: 120px;
+    height: 25px;
+    padding: 5px;
+    overflow: hidden;
+    max-height: 50px;
+    bottom: 20px;
+    left: 10px;
+}
+
+.filter-window.minimized #filterContent {
+    display: none;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    background-color: #cccccc;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: bold;
+    opacity: 1;
+}
+
+button:hover {
+    background-color: #56565e;
+}
+
+h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+label {
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px 20px 15px 15px;    /* top right bottom left */
+    padding: 24px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    color: #222;
+    background: #fff;
+}
+
+img {
+    width: 300px;          /* Maximum width of the image */
+    max-width: 100%;       /* Ensures the image is never wider than its container */
+    height: auto; 
+}
+
+.mapboxgl-popup {
+    max-width: 300px !important; 
+}
+
+#architectFilter {
+    position: absolute;    /* Allows precise positioning over the map */
+    bottom: 10px;          /* Distance from the bottom of the viewport */
+    left: 10px;            /* Distance from the left of the viewport */
+    z-index: 10;           /* Ensures it is layered above the map */
+    padding: 5px;
+    font-family: 'Helvetica', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: whitesmoke;
+    width: 200px;          /* Set a specific width if needed */
+}
+
+#layer-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.mapboxgl-popup-content {
+    border-radius: 12px; /* Adjust this value to increase or decrease the roundness */
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4); /* Optional: adds shadow for better visibility */
+    background-color: #FAF9F6; /* Change the background color */
+    color: #333; /* Change the text color */
+    font-family: Helvetica, sans-serif; /* Change the font */
+    padding: 10px 20px; /* Adjust padding inside the popup */
+    border: 1px solid #ccc; /* Add or change the border */
+    width: 300px; /* Fixed width */
+    max-width: 300px; /* Ensures that the popup does not grow wider than 300px */
+    min-height: 50px; /* Minimum height, adjust as needed */
+    overflow-wrap: break-word; /* Ensures text wraps and does not overflow */
+    overflow-y: auto; /* Adds a scrollbar if the content exceeds the popup height */
+    max-height: 400px; /* Maximum height before scrollbar appears */
+}
+

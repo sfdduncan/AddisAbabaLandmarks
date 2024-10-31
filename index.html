@@ -1,0 +1,78 @@
+<!DOCTYPE html> <!-- let the browser know this is an HTML file -->
+
+<html>      <!-- everything else is enclosed in html tags -->
+<head>      <!-- the head is for metadata prior to building the page -->
+    <!-- define the character set -->
+    <meta charset='utf-8' />    
+
+    <!-- the title of the page which will show up in the browser bar -->
+    <title>Analyzing Landmarks as Nodes of Neocolonial Influence in Addis Ababa</title>     
+
+    <!-- discourage the browser from caching the page -->    
+    <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate' />
+    <meta http-equiv='Pragma' content='no-cache' />
+    <meta http-equiv='Expires' content='0' />    
+
+    <!-- tells mobile devices how to scale the page -->    
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <!-- stylesheet links -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css' rel='stylesheet' />     
+    <link href='style.css' rel='stylesheet' />
+
+    <!-- javascript links -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js'></script>
+
+</head>
+<body>      <!-- visible structure of page begins here -->
+     <!-- Toggle window with filters -->
+     <div id="filterWindow" class="filter-window">
+        <button id="toggleFilterWindow">Filters</button>
+
+        <h3>Overview</h3>
+            <p><i>Landmarks and monuments in Addis Ababa are critical tools to navigate and situate oneself in the city. Neighborhoods are imprecise, street names change, but landmarks remain. From regime to regime there is hardly a political or social habit of tearing down landmarks, even if dedicated to the bloodiest of dictators. Landmarks are so important in Addis Ababa that they become the defining characteristic of micro-neighborhoods that clutter the city and are colloquially favored to bureaucratic neighborhood titles.</i>
+                <br>
+                <br>
+                The filter below allow you to explore architectural landmarks based on their architect's country of origin and understand neighborhood boundaries through various historical, political, and local factors. 
+                After filtering, hover over and select a point to read a brief overview of the landmark. 
+            </p>
+
+        <h2>Country of Origin</h2>
+        <select id="countryFilter">
+            <option value="">Select a country</option>
+            <option value="Italian">Italy</option>
+            <option value="Chinese">China</option>
+            <option value="French">France</option> 
+            <option value="Israeli">Israel</option>
+            <!-- Add other countries as needed -->
+        </select>
+
+        <br>
+        
+
+        <h2>Neighborhood Layers</h2>
+        <input type="checkbox" id="OuterMekanisa" checked>
+        <label for="OuterMekanisa">Outer Mekanisa</label><br>
+
+        <input type="checkbox" id="Mekanisa" checked>
+        <label for="Mekanisa">Mekanisa</label><br>
+
+        <input type="checkbox" id="InnerMekanisa" checked>
+        <label for="InnerMekanisa">Inner Mekanisa</label><br>
+
+        <input type="checkbox" id="OuterKazanchis" checked>
+        <label for="OuterKazanchis">Outer Kazanchis</label><br>
+
+        <input type="checkbox" id="Kazanchis" checked>
+        <label for="Kazanchis">Kazanchis</label><br>
+
+        <input type="checkbox" id="InnerKazanchis" checked>
+        <label for="InnerKazanchis">Inner Kazanchis</label><br>
+    </div>
+    <!-- an element called 'map' -->
+    <div id='map'></div>
+
+    <!-- load additional javascript -->
+    <script src='map.js'></script>    
+</body>
+</html>
