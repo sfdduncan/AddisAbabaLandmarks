@@ -112,6 +112,7 @@ document.getElementById('countryFilter').addEventListener('change', function(e) 
    const filterWindow = document.getElementById('filterWindow');
    const toggleButton = document.getElementById('toggleFilterWindow');
 
+   toggleButton.textContent = filterWindow.classList.contains('minimized') ? 'Show Filters' : 'Hide Filters';
    toggleButton.addEventListener('click', () => {
        if (filterWindow.classList.contains('minimized')) {
            filterWindow.classList.remove('minimized');
